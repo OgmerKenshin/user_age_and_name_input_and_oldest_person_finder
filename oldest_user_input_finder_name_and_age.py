@@ -28,7 +28,8 @@ while True:
     while not valid_age(age):
         print("seriously? dude...")
         age = input("please input your age here: ")
-        
+
+age = int(age)
 
        
             
