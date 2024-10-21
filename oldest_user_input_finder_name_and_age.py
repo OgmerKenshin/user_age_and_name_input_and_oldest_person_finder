@@ -12,17 +12,23 @@ def oldest_user(data):
     return oldest_user
 
 
-
-
-
-
-
-
-
-
-
+# Now the array is where the names and ages are stored
 #this will be the array
 Identification = {}
+
+#I can now proceed to making loops and user input texts
+while True:
+    name = input("please enter your name here: ")
+    while not valid_name(name):
+        print("HAHA wrong!!! names should consist of letters and spaces only, if not then that's just sad man")
+        name = input("please enter your name here: ")
+
+
+    age = input("please enter your age here: ")
+    while not valid_age(age):
+        print("seriously? dude...")
+        age = input("please input your age here: ")
+        
 
        
             
