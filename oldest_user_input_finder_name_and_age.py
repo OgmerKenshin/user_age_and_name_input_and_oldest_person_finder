@@ -33,6 +33,11 @@ while True:
 age = int(age)
 Identification.append((name,age))
 
+#retry and finally the break
+retry = input("do you wanna input another entry? (Yes or No): ").strip().lower()
+if retry != "yes": 
+    break
+
        
             
 
