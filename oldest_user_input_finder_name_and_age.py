@@ -5,7 +5,7 @@ def valid_name(name):
 def valid_age(age):
     return age.isdigit() and 0 <= int(age) <= 122
 # I will return the age and name for the "oldest person"
-def oldest_user(data):
+def oldest_person(data):
     if len(data) == 0:
         return None, None
     oldest_user = max(data, key=lambda person: person[1])
@@ -38,6 +38,12 @@ retry = input("do you wanna input another entry? (Yes or No): ").strip().lower()
 if retry != "yes": 
     break
 
+# find and reveal the oldest person
+
+if name:
+    print(f"the oldest person is {name} with {age}.")
+else: 
+    print("How can you not put any valid entries and reach this part?")
        
             
 
