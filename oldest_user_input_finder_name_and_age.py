@@ -29,7 +29,9 @@ while True:
         print("seriously? dude...")
         age = input("please input your age here: ")
 
+# the age variable needs to be an integer and both variables are now stored in the array set earlier
 age = int(age)
+Identification.append((name,age))
 
        
             
