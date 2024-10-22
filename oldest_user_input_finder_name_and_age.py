@@ -36,14 +36,15 @@ while True:
     #retry and finally the break
     retry = input("do you wanna input another entry? (Yes or No): ").strip().lower()
     if retry != "yes": 
-      break
+        break
+
 
 # find and reveal the oldest person
 oldest = get_oldest_person(Identification)
 if oldest:
-    print(f"the oldest person is {age[0]} with {age[1]}.")
+    print(f"the oldest person is {oldest[0]} with {oldest[1]}.")
 else: 
-    print("How can you not put any valid entries and reach this part?")
+    print("No valid entries")
        
             
 
