@@ -14,16 +14,21 @@
 
 
 # I'm gonne set rules for what names are valid and what names aren't
+# lets allow special characters in the name too now
 def is_valid_name(name):
-    return name.replace(" ", "").isalpha()
+    allowed_characters = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .'-~,")
+    return all(char in allowed_characters for char in name)
+
 def is_valid_age(age):
     return age.isdigit() and 0 <= int(age) <= 122
+
+# I need to account for the possibility of multiple oldest people
 # I will return the age and name for the "oldest person"
 def get_oldest_person(data):
     if len(data) == 0:
-        return None, None
-    oldest_person = max(data, key=lambda person: person[1])
-    return oldest_person
+        return []
+    oldest_age = max(person[1] for person in data)
+    return [person for person in data if person [1] == oldest_age]
 
 
 # Now the array is where the names and ages are stored
@@ -34,7 +39,7 @@ Identification = []
 while True:
     name = input("please enter your name here: ")
     while not is_valid_name(name):
-        print("HAHA wrong!!! names should consist of letters and spaces only")
+        print("HAHA wrong!!!")
         name = input("please enter your name here: ")
 
 
@@ -56,7 +61,7 @@ while True:
 # find and reveal the oldest person
 oldest = get_oldest_person(Identification)
 if oldest:
-    print(f"the oldest person is {oldest[0]} with {oldest[1]}.")
+    print(f"the oldest people are {oldest[0]} with {oldest[1]}.")
 else: 
     print("No valid entries")
        
