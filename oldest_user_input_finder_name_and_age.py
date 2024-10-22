@@ -1,3 +1,17 @@
+# set conditions for valid name (alphabet letters and spaces only) and valid ages (numbers between 0-122) and return
+# insert an array to store names and ages
+# while true loop for user inputs
+# while not statement for name 
+# print("HAHA wrong!!!)
+# while not statement for age
+# print("seriously? invalid age dude...")
+# conver age = int(age)
+# retry input("do you wanna input another entry? (yes or no):")
+# if oldest = get oldest person(array)
+# else print("no valid entries")
+
+
+
 
 # I'm gonne set rules for what names are valid and what names aren't
 def is_valid_name(name):
@@ -20,13 +34,13 @@ Identification = []
 while True:
     name = input("please enter your name here: ")
     while not is_valid_name(name):
-        print("HAHA wrong!!! names should consist of letters and spaces only, if not then that's just sad man")
+        print("HAHA wrong!!! names should consist of letters and spaces only")
         name = input("please enter your name here: ")
 
 
     age = input("please enter your age here: ")
     while not is_valid_age(age):
-        print("seriously? dude...")
+        print("seriously? invalid age dude...")
         age = input("please input your age here: ")
 
     # the age variable needs to be an integer and both variables are now stored in the array set earlier
