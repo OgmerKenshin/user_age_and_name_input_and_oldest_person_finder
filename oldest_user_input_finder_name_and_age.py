@@ -61,7 +61,10 @@ while True:
 # find and reveal the oldest person
 oldest = get_oldest_person(Identification)
 if oldest:
-    print(f"the oldest people are {oldest[0]} with {oldest[1]}.")
+    print("The oldest people are: ")
+    for person in oldest:
+      print(f"{person[0]} with {person[1]}")
+
 else: 
     print("No valid entries")
        
